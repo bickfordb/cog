@@ -9,8 +9,8 @@ Put `[cog "1.0.0"]` into the `:plugins` vector of your project.clj.
 ```clojure
 (defproject my-website "1.0.0"
   ...
-  :cog {:targets {"javascript" {:watch "/assets/public/js"
-                               :exec ["bash" "scripts/build-javascript.sh"]}}})
+  :cog {:targets {"javascript" {:watch "resources/public/js"
+                                :exec ["bash" "scripts/build-javascript.sh"]}}})
 ```
 
 Cog will automatically start with the "ring server" leiningen command
