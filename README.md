@@ -15,11 +15,11 @@ Put `[cog "1.0.0"]` into the `:plugins` vector of your project.clj.
 
 Cog will automatically start with the "ring server" leiningen command
 
-### Commands:
+### Commands
 
-Build all targets: `lein cog build`
-Force a target to run: `lein cog build js`
-Watch all targets: `lein cog watch`
+* Build all targets: `lein cog build`
+* Force a target to run: `lein cog build js`
+* Watch all targets: `lein cog watch`
 
 ## License
 
