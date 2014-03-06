@@ -1,22 +1,25 @@
 # cog
 
-A Leiningen plugin to do watch targets and execute shell build commands on change.
+Cog is a leiningen plugin to watch targets and execute shell build commands whenever they change
 
 ## Usage
 
-FIXME: Use this for user-level plugins:
+Put `[cog "1.0.0"]` into the `:plugins` vector of your project.clj.
 
-Put `[cog "1.0.0"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-cog 1.0.0`.
+```clojure
+(defproject my-website "1.0.0"
+  ...
+  :cog {:targets {"javascript" {:watch "/assets/public/js"
+                               :exec ["bash" "scripts/build-javascript.sh"]}}})
+```
 
-FIXME: Use this for project-level plugins:
+Cog will automatically start with the "ring server" leiningen command
 
-Put `[cog "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+### Commands:
 
-FIXME: and add an example usage that actually makes sense:
-
-    $ lein cog
+Build all targets: `lein cog build`
+Force a target to run: `lein cog build js`
+Watch all targets: `lein cog watch`
 
 ## License
 
